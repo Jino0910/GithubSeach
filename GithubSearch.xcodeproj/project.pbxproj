@@ -23,6 +23,8 @@
 		6137616E2674D97100AC8694 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6137616D2674D97100AC8694 /* ViewModel.swift */; };
 		613761712674E59800AC8694 /* AppDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613761702674E59800AC8694 /* AppDependency.swift */; };
 		613761742675BFAF00AC8694 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613761732675BFAF00AC8694 /* RepositoryTableViewCell.swift */; };
+		613761782675C6D400AC8694 /* AFSessionManagerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613761772675C6D400AC8694 /* AFSessionManagerStub.swift */; };
+		6137617A2675C6EC00AC8694 /* APIManagerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613761792675C6EC00AC8694 /* APIManagerStub.swift */; };
 		68D12C3D93F19DBE7241B89C /* Pods_GithubSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE25C5E344A91FE1E956DFC4 /* Pods_GithubSearch.framework */; };
 		B9631F15151B506ABFB5E471 /* Pods_GithubSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25F28EE6A0840951DFB9EBC /* Pods_GithubSearchTests.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +69,8 @@
 		6137616D2674D97100AC8694 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		613761702674E59800AC8694 /* AppDependency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDependency.swift; sourceTree = "<group>"; };
 		613761732675BFAF00AC8694 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
+		613761772675C6D400AC8694 /* AFSessionManagerStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFSessionManagerStub.swift; sourceTree = "<group>"; };
+		613761792675C6EC00AC8694 /* APIManagerStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerStub.swift; sourceTree = "<group>"; };
 		7D8674437292463DCE66A62B /* Pods-GithubSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSearchTests.release.xcconfig"; path = "Target Support Files/Pods-GithubSearchTests/Pods-GithubSearchTests.release.xcconfig"; sourceTree = "<group>"; };
 		A33752BC9EC884396C5F0873 /* Pods-GithubSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSearch.release.xcconfig"; path = "Target Support Files/Pods-GithubSearch/Pods-GithubSearch.release.xcconfig"; sourceTree = "<group>"; };
 		BBEA803EC962D147A5D750D5 /* Pods-GithubSearch-GithubSearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSearch-GithubSearchUITests.release.xcconfig"; path = "Target Support Files/Pods-GithubSearch-GithubSearchUITests/Pods-GithubSearch-GithubSearchUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 		613761432674A51B00AC8694 /* GithubSearchTests */ = {
 			isa = PBXGroup;
 			children = (
+				613761752675C6B400AC8694 /* Mocks */,
 				613761442674A51B00AC8694 /* GithubSearchTests.swift */,
 				613761462674A51B00AC8694 /* Info.plist */,
 			);
@@ -233,6 +238,23 @@
 				613761732675BFAF00AC8694 /* RepositoryTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		613761752675C6B400AC8694 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				613761762675C6C100AC8694 /* Network */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		613761762675C6C100AC8694 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				613761772675C6D400AC8694 /* AFSessionManagerStub.swift */,
+				613761792675C6EC00AC8694 /* APIManagerStub.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		CA1F1338B54E65AA5877918E /* Frameworks */ = {
@@ -501,6 +523,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				613761452674A51B00AC8694 /* GithubSearchTests.swift in Sources */,
+				613761782675C6D400AC8694 /* AFSessionManagerStub.swift in Sources */,
+				6137617A2675C6EC00AC8694 /* APIManagerStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

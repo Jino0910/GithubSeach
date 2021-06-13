@@ -11,9 +11,10 @@ import Kingfisher
 class RepositoryTableViewCell: UITableViewCell {
     
     @IBOutlet private weak var avatarImageView: UIImageView!
-    @IBOutlet private weak var stargazersCountLabel: UILabel!
-    @IBOutlet private weak var updatedAtLabel: UILabel!
-    @IBOutlet private weak var languageLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var stargazersCountLabel: UILabel!
+    @IBOutlet weak var updatedAtLabel: UILabel!
+    @IBOutlet weak var languageLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,6 +33,7 @@ class RepositoryTableViewCell: UITableViewCell {
             avatarImageView.kf.setImage(with: URL(string: urlString),
                                         options: [.transition(ImageTransition.fade(0.2))])
         }
+        nameLabel.text = "name: \(item.name)"
         stargazersCountLabel.text = "stargazersCount: \(item.stargazersCount)"
         updatedAtLabel.text = "updatedAt: \(item.updatedAt)"
         languageLabel.text = "language: \(item.language ?? "")"
