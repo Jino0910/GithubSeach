@@ -9,9 +9,12 @@ import Foundation
 
 // MARK: - Empty
 struct RepositoryModel: Codable {
+    
+    static let defaultPerPage = 30
+    
     let totalCount: Int
     let incompleteResults: Bool
-    let items: [Item]
+    var items: [Item]
     
     enum CodingKeys: String, CodingKey {
         case totalCount = "total_count"
@@ -22,48 +25,48 @@ struct RepositoryModel: Codable {
     // MARK: - Item
     struct Item: Codable {
         let id: Int
-        let nodeID, name, fullName: String
+        let nodeID, name, fullName: String 
         let itemPrivate: Bool
-        let owner: Owner
-        let htmlURL: String
-        let itemDescription: String
-        let fork: Bool
-        let url, forksURL: String
-        let keysURL, collaboratorsURL: String
-        let teamsURL, hooksURL: String
-        let issueEventsURL: String
-        let eventsURL: String
-        let assigneesURL, branchesURL: String
-        let tagsURL: String
-        let blobsURL, gitTagsURL, gitRefsURL, treesURL: String
-        let statusesURL: String
-        let languagesURL, stargazersURL, contributorsURL, subscribersURL: String
-        let subscriptionURL: String
-        let commitsURL, gitCommitsURL, commentsURL, issueCommentURL: String
-        let contentsURL, compareURL: String
-        let mergesURL: String
-        let archiveURL: String
-        let downloadsURL: String
-        let issuesURL, pullsURL, milestonesURL, notificationsURL: String
-        let labelsURL, releasesURL: String
-        let deploymentsURL: String
+        let owner: Owner?
+        let htmlURL: String?
+        let itemDescription: String?
+        let fork: Bool?
+        let url, forksURL: String?
+        let keysURL, collaboratorsURL: String?
+        let teamsURL, hooksURL: String?
+        let issueEventsURL: String?
+        let eventsURL: String?
+        let assigneesURL, branchesURL: String?
+        let tagsURL: String?
+        let blobsURL, gitTagsURL, gitRefsURL, treesURL: String?
+        let statusesURL: String?
+        let languagesURL, stargazersURL, contributorsURL, subscribersURL: String?
+        let subscriptionURL: String?
+        let commitsURL, gitCommitsURL, commentsURL, issueCommentURL: String?
+        let contentsURL, compareURL: String?
+        let mergesURL: String?
+        let archiveURL: String?
+        let downloadsURL: String?
+        let issuesURL, pullsURL, milestonesURL, notificationsURL: String?
+        let labelsURL, releasesURL: String?
+        let deploymentsURL: String?
         let createdAt, updatedAt, pushedAt: String
-        let gitURL, sshURL: String
-        let cloneURL: String
-        let svnURL: String
+        let gitURL, sshURL: String?
+        let cloneURL: String?
+        let svnURL: String?
         let homepage: String?
         let size, stargazersCount, watchersCount: Int
-        let language: String
-        let hasIssues, hasProjects, hasDownloads, hasWiki: Bool
-        let hasPages: Bool
-        let forksCount: Int
+        let language: String?
+        let hasIssues, hasProjects, hasDownloads, hasWiki: Bool?
+        let hasPages: Bool?
+        let forksCount: Int?
         let mirrorURL: String?
-        let archived, disabled: Bool
-        let openIssuesCount: Int
+        let archived, disabled: Bool?
+        let openIssuesCount: Int?
         let license: License?
-        let forks, openIssues, watchers: Int
-        let defaultBranch: String
-        let score: Int
+        let forks, openIssues, watchers: Int?
+        let defaultBranch: String?
+        let score: Int?
         
         enum CodingKeys: String, CodingKey {
             case id
@@ -141,11 +144,11 @@ struct RepositoryModel: Codable {
 
     // MARK: - License
     struct License: Codable {
-        let key: String
-        let name: String
-        let spdxID: String
+        let key: String?
+        let name: String?
+        let spdxID: String?
         let url: String?
-        let nodeID: String
+        let nodeID: String?
         
         enum CodingKeys: String, CodingKey {
             case key, name
@@ -157,18 +160,18 @@ struct RepositoryModel: Codable {
 
     // MARK: - Owner
     struct Owner: Codable {
-        let login: String
-        let id: Int
-        let nodeID: String
+        let login: String?
+        let id: Int?
+        let nodeID: String?
         let avatarURL: String
-        let gravatarID: String
-        let url, htmlURL, followersURL: String
-        let followingURL, gistsURL, starredURL: String
-        let subscriptionsURL, organizationsURL, reposURL: String
-        let eventsURL: String
-        let receivedEventsURL: String
-        let type: TypeEnum
-        let siteAdmin: Bool
+        let gravatarID: String?
+        let url, htmlURL, followersURL: String?
+        let followingURL, gistsURL, starredURL: String?
+        let subscriptionsURL, organizationsURL, reposURL: String?
+        let eventsURL: String?
+        let receivedEventsURL: String?
+        let type: String?
+        let siteAdmin: Bool?
         
         enum CodingKeys: String, CodingKey {
             case login, id
@@ -189,11 +192,6 @@ struct RepositoryModel: Codable {
             case type
             case siteAdmin = "site_admin"
         }
-    }
-
-    enum TypeEnum: String, Codable {
-        case organization = "Organization"
-        case user = "User"
     }
 }
 
