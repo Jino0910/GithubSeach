@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 enum GithubAPI {
-    case repository(String)
+    case repository(query: String, page: Int)
 }
 
 extension GithubAPI {
@@ -23,8 +23,8 @@ extension GithubAPI {
     var path: String {
         
         switch self {
-        case let .repository(q):
-            return "\(baseURL)/search/repositories?q=\(q)"
+        case let .repository(query, page):
+            return "\(baseURL)/search/repositories?q=\(query)&page=\(page)"
         }
     }
     
