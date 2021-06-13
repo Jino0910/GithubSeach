@@ -32,7 +32,7 @@ class RepositoryTableViewCell: UITableViewCell {
             avatarImageView.kf.setImage(with: URL(string: urlString),
                                         options: [.transition(ImageTransition.fade(0.2))])
         }
-        stargazersCountLabel.text = "repository: \(item.stargazersCount)"
+        stargazersCountLabel.text = "stargazersCount: \(item.stargazersCount)"
         updatedAtLabel.text = "updatedAt: \(item.updatedAt)"
         languageLabel.text = "language: \(item.language ?? "")"
     }
