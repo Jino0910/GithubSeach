@@ -53,9 +53,6 @@ class ViewModel {
             .disposed(by: bag)
         
         page
-            .do(onNext: { value in
-                print("value = \(value)")
-            })
             .filter{ $0 != 1 }
             .filter({ [weak self]_ in
                 guard let self = self else { return false }
