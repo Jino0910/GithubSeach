@@ -10,7 +10,6 @@ target 'GithubSearch' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'Alamofire'
-  pod 'RxDataSources'
   pod 'Kingfisher'
 
   target 'GithubSearchTests' do
