@@ -61,6 +61,9 @@ extension ViewController {
             .text
             .map{ $0 ?? "" }
             .asObservable()
+            .do(onNext: { (text) in
+                print(text)
+            })
             .bind(to: viewModel.query)
             .disposed(by: bag)
         

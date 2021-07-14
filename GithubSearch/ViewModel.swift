@@ -12,9 +12,9 @@ import RxCocoa
 class ViewModel {
 
     struct Dependency {
-        let apiManager: APIManagerProtocol!
+        let apiManager: APIManagerProtocol
     }
-    private let dependency: Dependency!
+    private let dependency: Dependency
     private let bag = DisposeBag()
     
     // MARK: - Input
